@@ -8,7 +8,7 @@ const secondRouter = express.Router();
 
 
 secondRouter.get('/hello',(req,res)=>{
-	res.end("hello from second router subfolder")
+	res.end("hello from second fuck yeah  subfolder")
 });
 
 
