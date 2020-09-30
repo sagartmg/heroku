@@ -1,11 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
+import axios from 'axios'
 function App() {
+  function second(){
+    axios.get("http://localhost:5000/second/hello")
+      .then(res=>{
+        console.log(res.data);
+      })
+      .catch(error=>console.log("second error"))
+  }
+  function toback(){
+   axios.get('http://localhost:5000/first')
+          .then(res=>{
+              console.log(res.data,"res.data")
+                // const {user} = res.data;
+                console.log("first to backend.console ");
+                res.end("first to backend res.end")
+                // console.log("all_excercies_before",all_excercies)
+                // alert(user);
+
+                // console.log("user",user)
+                // console.log("all_excercies_afger",all_excercies)
+                })
+          .catch(error=>console.log("an erro has occured"));
+  }
+  function getFuck(){
+    axios.get("http://localhost:5000/fuck")
+      .then(res=>console.log(res.data))
+  }
   return (
     <div>
     welcome everyofuck yeahe  without build
+        <button onClick={toback}>first axios</button>
+        <button onClick={second}>second via route axios</button>
+        <button onClick={getFuck}>fuck</button>
+
+
     </div>
   );
 }
