@@ -5,7 +5,7 @@ require('dotenv').config();
   
 
 
-var PORT = process.env.REACT_APP_PORT || 5000
+var PORT = process.env.PORT || 5000
 const path = require("path")
 const cors = require("cors")
 const morgan = require("morgan")
