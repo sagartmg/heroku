@@ -3,6 +3,7 @@ import React from 'react';
 import axios from 'axios'
 function App() {
   function second(){
+    // this wont work cause heroku don't have local host 
     axios.get("http://localhost:5000/second/hello")
       .then(res=>{
         console.log(res.data);
@@ -10,6 +11,7 @@ function App() {
       .catch(error=>console.log("second error"))
   }
   function toback(){
+    // working !! hero don't have localhost
    axios.get('/first')
           .then(res=>{
               console.log(res.data)
