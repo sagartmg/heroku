@@ -23,6 +23,10 @@ app.use("/first",(req,res)=>{
 	res.end("first-backend-connected ")
 })
 
+app.use("/fuck",(req,res)=>{
+	res.end("fucking-backend-connected ")
+})
+
 
 
 app.use("/second",secondRouter);
@@ -41,6 +45,4 @@ app.get('*', (req, res) => {
 
 
 
-app.listen(PORT,function(){
-  console.log('server successfully started on port '+PORT);
-});
+app.listen(PORT,'0.0.0.0');
