@@ -20,12 +20,10 @@ app.use("/path",(req,res)=>{
 
 
 app.use("/first",(req,res)=>{
-	res.end("conntected to backedn from index.js server")
+	res.end("first-backend-connected ")
 })
 
-app.use("/fuck",(req,res)=>{
-	res.end("fuck off")
-})
+
 
 app.use("/second",secondRouter);
 

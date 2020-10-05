@@ -12,17 +12,17 @@ function App() {
   function toback(){
    axios.get('http://localhost:5000/first')
           .then(res=>{
-              console.log(res.data,"res.data")
+              console.log(res.data)
                 // const {user} = res.data;
-                console.log("first to backend.console ");
-                res.end("first to backend res.end")
+                // console.log("first to backend.console ");
+                // res.end("first to backend res.end")
                 // console.log("all_excercies_before",all_excercies)
                 // alert(user);
 
                 // console.log("user",user)
                 // console.log("all_excercies_afger",all_excercies)
                 })
-          .catch(error=>console.log("an erro has occured"));
+          .catch(error=>console.log("an error has occured-first"));
   }
   function getFuck(){
     axios.get("http://localhost:5000/fuck")
@@ -30,11 +30,13 @@ function App() {
   }
   return (
     <div>
-    welcome everyofuck yeahe  without build
+      Fetch data from backend
         <button onClick={toback}>first axios</button>
+       {/* 
         <button onClick={second}>second via route axios</button>
         <button onClick={getFuck}>fuck</button>
 
+      */}
 
     </div>
   );
