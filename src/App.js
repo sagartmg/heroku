@@ -10,7 +10,7 @@ function App() {
       .catch(error=>console.log("second error"))
   }
   function toback(){
-   axios.get('http://localhost:5000/first')
+   axios.get('/first')
           .then(res=>{
               console.log(res.data)
               
@@ -32,10 +32,8 @@ function App() {
         <button onClick={toback}>first axios</button>
         <button onClick={fuck}>fuck</button>
 
-       {/* 
         <button onClick={second}>second via route axios</button>
 
-      */}
 
     </div>
   );
