@@ -6,6 +6,7 @@ import axios from 'axios'
 // in .env file  
 // REACT_APP_PORT = 4001
 // REACT_APP_PRODUCTION = development
+// PORT = 4001  // in server file 
 
 
 let PORT = process.env.REACT_APP_PORT || 5000
