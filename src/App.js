@@ -18,7 +18,7 @@ function App() {
           .catch(error=>console.log("an error has occured-first"));
   }
   function fuck(){
-   axios.get('http://localhost:5000/fuck')
+   axios.get('/fuck')
           .then(res=>{
               console.log(res.data)
               
