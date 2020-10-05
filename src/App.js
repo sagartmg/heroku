@@ -1,6 +1,33 @@
 import React from 'react';
 
 import axios from 'axios'
+
+
+// in .env file  
+// REACT_APP_PORT = 4001
+// REACT_APP_PRODUCTION = development
+
+
+let PORT = process.env.REACT_APP_PORT || 5000
+console.log(process.env)
+
+let hostname;
+if (process.env.REACT_APP_PRODUCTION == "development"){
+  hostname=`http://localhost:${PORT}`
+
+}
+else{
+  hostname="";
+}
+// console.log("hos",hostname)
+// console.log("key",process.env.REACT_APP_PRODUNCTIO)
+
+
+let prod = process.env.PRODUCTION
+if(prod){
+  console.log("production is true")
+}
+
 function App() {
   function second(){
     // this wont work cause heroku don't have local host 
@@ -20,7 +47,7 @@ function App() {
           .catch(error=>console.log("an error has occured-first"));
   }
   function fuck(){
-   axios.get('/fuck')
+   axios.get(`${hostname}/fuck`)
           .then(res=>{
               console.log(res.data)
               

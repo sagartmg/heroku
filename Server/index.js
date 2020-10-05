@@ -1,16 +1,12 @@
 var express = require('express');
 var app = express();
 
-require('dotenv').config();
-  
+require('dotenv').config()
 
-
-var PORT = process.env.REACT_APP_PORT || 5000
+var PORT = process.env.PORT
 const path = require("path")
 const cors = require("cors")
 const morgan = require("morgan")
-
-
 
 
 app.use(cors())
@@ -25,14 +21,12 @@ app.use("/path",(req,res)=>{
 
 
 app.use("/first",(req,res)=>{
-	res.end("first-backend-connected ")
+	res.end("conntected to backedn from index.js server")
 })
 
 app.use("/fuck",(req,res)=>{
-	res.end("fucking-backend-connected ")
+	res.end("fuck off")
 })
-
-
 
 app.use("/second",secondRouter);
 
@@ -50,6 +44,6 @@ app.get('*', (req, res) => {
 
 
 
-app.listen(PORT,'0.0.0.0',()=>{
-	console.log("server running at prot ",PORT)
+app.listen(PORT,function(){
+  console.log('server successfully started on port '+PORT);
 });
