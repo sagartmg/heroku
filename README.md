@@ -12,4 +12,4 @@ if not in master git branch
 7.git branch -D master
 8.git add .
 9.git commit
-10.git push heroku master
+10.git push heroku main
