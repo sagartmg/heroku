@@ -4,11 +4,12 @@
 4. git init
 5. heroku git:remote -a sheltered-spire-06602
 
+if in master git branch
+==> git push heroku master
 
-then to main ..if not in master git branch
-
-git checkout -b main// creating a branch named main
-git branch -D master
-git add .
-git commit
-git push heroku master
+if not in master git branch
+6.git checkout -b main// creating a branch named main
+7.git branch -D master
+8.git add .
+9.git commit
+10.git push heroku master
